@@ -1,37 +1,35 @@
- <h1>
+    <h1>
   Payment Results
 </h1>
 
 <dl>
-
   <dt>
     APR
   </dt>
   <dd>
-    <%=@payment.to_fs(:percentage)%>
+    <%= @apr.to_fs(:percentage, {:precision => 4})%>
   </dd>
 
   <dt>
-    Number of Years
+    Number of years
   </dt>
   <dd>
-    <%= @number_of_years%>   
+    <%= @years%>
   </dd>
 
   <dt>
     Principal
   </dt>
   <dd>
-    <%= @principal%>   
+    <%= @pv.to_fs(:currency)%>
   </dd>
 
   <dt>
     Payment
   </dt>
   <dd>
-    <%=@payment.to_fs(:currency)%>   
+    <%= @payment.to_fs(:currency)%>
   </dd>
-
 </dl>
 
 <a href="/payment/new">

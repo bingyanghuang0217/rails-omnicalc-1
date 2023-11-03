@@ -1,4 +1,4 @@
- <h1>
+<h1>
   Square Root Results
 </h1>
 
@@ -7,17 +7,18 @@
     Number
   </dt>
   <dd>
-    <%= params.fetch("users_number") %>
+    <%= @num %>
   </dd>
 
   <dt>
     Square Root
   </dt>
   <dd>
-    <%= Math.sqrt(params.fetch("users_number").to_f)%> 
+    <%= @square_root %>
   </dd>
 </dl>
 
 <a href="/square_root/new">
   Calculate another square root
 </a>
+

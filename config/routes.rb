@@ -1,22 +1,12 @@
 Rails.application.routes.draw do
-  
-  get("/", { :controller => "game", :action => "rules" })
-
-  get("/square/new", { :controller => "game", :action => "square" })
-
-  get("/square_root/new", { :controller => "game", :action => "square_root" })
-
-  get("/payment/new", { :controller => "game", :action => "payment" })
-
-  get("/random/new", { :controller => "game", :action => "random" })
-
-  get("/square/results", { :controller => "game", :action => "square_results" })
-
-  get("/square_root/results", { :controller => "game", :action => "square_root_results" })
-
-  get("/payment/results", { :controller => "game", :action => "payment_results" })
-
-  get("/random/results", { :controller => "game", :action => "random_results" })
-
-
+  get("/", {:controller => "omicalc", :action => "home"})
+  get("/square/new", {:controller => "omicalc", :action => "square_new"})
+  get("/square/results", {:controller => "omicalc", :action => "square_results"})
+  get("/square_root/new", {:controller => "omicalc", :action => "square_root_new"})
+  get("/square_root/results", {:controller => "omicalc", :action => "square_root_results"})
+  get("/payment/new", {:controller => "omicalc", :action => "payment_new"})
+  get("/payment/results", {:controller => "omicalc", :action => "payment_results"})
+  get("/random/new", {:controller => "omicalc", :action => "random_new"})
+  get("/random/results", {:controller => "omicalc", :action => "random_results"})
 end
+
